@@ -8,7 +8,7 @@ print(f"A média das notas é: {media:.2f}")
 
 if media >= 7:
     print("Aprovado")
-elif media >= 4:
+elif media >= 4: #elif adicionado depois. Não faz parte do exercício.
     print("Prova final")
 else:
     print("Reprovado")
