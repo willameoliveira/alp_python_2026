@@ -11,5 +11,8 @@ print ("""
 
 altura = float(input("Informe a altura (em metros, ex: 1.70): "))
 peso = float(input("Informe o peso (em kg, ex: 71.3): "))
-imc = peso/(altura**2)
+
+#formula do imc
+imc = peso / altura ** 2
+
 print(f"O valor do IMC é: {imc:.2f}")
