@@ -15,8 +15,8 @@ print("Acesso liberado")
 while True:
     senha = input("Senha: ")
     if senha == "12345":
+        print("Acesso liberado")
         break
     else:
         print("Tente novamente!")
-
 '''

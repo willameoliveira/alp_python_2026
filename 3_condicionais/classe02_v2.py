@@ -12,8 +12,8 @@ nota3 = float(input("Digite a terceira nota: "))
 media = (nota1 + nota2 + nota3) / 3
 
 if media >= 7:
-    print(f"Aluno aprovado com média: {media:.1f}")
-elif media >= 4: # mesmo que dizer senao se media >= 4 e media < 7
-    print(f"Aluno de prova final com média: {media:.1f}")
-else:
-    print(f"Aluno reprovado com média: {media:.1f}")
+    print("Aprovado")
+if media >= 4 and media < 7:
+    print("Prova final")
+if media < 4:
+    print("Reprovado")
