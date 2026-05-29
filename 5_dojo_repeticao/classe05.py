@@ -6,12 +6,21 @@ Quando o usuário informar um número negativo, o programa deve parar de receber
     c) o maior dos números positivos informados.
 '''
 soma = 0
-media = 0
-numero = int(input("Digite um numero"))
-while numero >= 0:
-    soma += numero
+cont = 0
+numero = 1
+maior = 0
+while numero > 0:
+    numero = int(input("Digite um numero: "))
+    if numero > 0:
+        soma += numero
+        cont += 1
+    if numero > maior:
+        maior = numero
+print(f"a soma é :{soma}")
+print(f"a media é :{soma/cont}")
+print(f"o maior é:{maior}")  
 
 
-print(f"A soma é {soma}")
+
 
 
