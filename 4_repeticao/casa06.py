@@ -1,13 +1,15 @@
 '''
-6. Um professor de Matemática deseja construir um programa para imprimir uma Progressão Aritmética (PA). 
-Para isso, devem ser informados 3 argumentos: a) primeiro termo, b) quantidade de termos e c) razão.
+6. Um professor de Matemática deseja construir um programa 
+para imprimir uma Progressão Aritmética (PA). 
+Para isso, devem ser informados 3 argumentos: 
+a) primeiro termo, b) quantidade de termos e c) razão.
 '''
-pt = int(input("Digite o primeiro termo: "))
-qt = int(input("Digite a quantidade d termos: "))
-raz = int(input("Digite a razão: "))
+primeiro_termo = int(input("Digite o primeiro termo: "))
+qtde_termos = int(input("Digite a quantidade de termos: "))
+razao = int(input("Digite a razão: "))
 
-termo = pt
+termo = primeiro_termo
 
-for cont in range(qt):
+for cont in range(qtde_termos):
     print(termo)
-    termo += raz
+    termo += razao
