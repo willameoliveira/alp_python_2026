@@ -5,6 +5,13 @@ Mas, se ele for ímpar, deve ser calculado o seu cubo.
 Ao fim, o programa deve imprimir o valor calculado. 
 '''
 
-numero = int(input("Digite seu número par ou ímpar"))
+num = int(input("Digite seu número inteiro"))
 
-if 2 % == 0:
+if num % 2 == 0:
+    resultado = num **2
+    print(f"O seu numero é par. E o quadrado do numero é {resultado:.2f}")
+else: 
+    resultado =num **3 
+    print(f"o numero e impar. E o cubo do numero é {resultado:.2f}")
+   
+    
