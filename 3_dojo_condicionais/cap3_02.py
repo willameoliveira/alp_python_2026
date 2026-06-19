@@ -23,18 +23,18 @@ numero2 = float(input("Digite o segundo numero: "))
 
 if opçao == 1:
     media = (numero1 * 2 + numero2 * 3)/5
-    print(f"Resultado:{media:.2f}" )
+    print(f"Resultado: {media:.2f}" )
 elif opçao == 2:
     media = (numero1 + numero2)**2
-    print(f"Resultado:{media}")
+    print(f"Resultado: {media}")
 elif opçao == 3:
     if numero1 < numero2: 
-     numero1 ** 3
-     print(f"o cubo do menor número é: {cubo do menor}"
- elif opcao == 3:
-    if numero2 < numero1
+     print(f"cubo do menor:{numero1**3}")
     else:
-     numero2 ** 3
+       print(f"cubo do menor:{numero2**3}")
+else:
+   print("Opção inválida!")
+
 
     
 
