@@ -1,4 +1,4 @@
-import usuarios
+from usuarios import adicionar, pesquisar, remover, listarTodos
 
 while True:
     print("\033c", end="")  # Limpa a tela do terminal
@@ -15,6 +15,12 @@ while True:
         break
 
     if opcao == "1":
-        usuarios.adiciona()
+        adicionar()
+    elif opcao == "2":
+        pesquisar()
+    elif opcao == "3":
+        remover()
+    elif opcao == "4":
+        listarTodos()
     else:
         input("Opção inválida! ENTER para continuar!")
