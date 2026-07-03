@@ -6,6 +6,11 @@
 #
 #     streamlit run app.py
 #
+# Caso ainda não tenha instalado o Streamlit, vá no terminal e
+# execute: 
+# 
+#     pip install streamlit
+#
 # Responsabilidade deste arquivo:
 #   1) Configurar a página do Streamlit.
 #   2) Iniciar as variáveis de controle da sessão (session_state).
