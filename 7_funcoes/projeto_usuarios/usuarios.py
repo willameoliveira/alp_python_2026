@@ -1,4 +1,4 @@
-usuarios = {"admin": 12345}
+usuarios = {"admin": "12345"}
 
 def adicionar():
     print("\033c", end="")  # Limpa a tela do terminal

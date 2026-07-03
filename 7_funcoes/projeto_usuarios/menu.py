@@ -4,9 +4,9 @@ def mostrarMenu(usuario_logado):
     while True:
         print("\033c", end="")  # Limpa a tela do terminal
         opcao = input(f"""
-        Usuário logado: {usuario_logado}!
+        Usuário logado: {usuario_logado}
 
-        --- Cadastro de usuários --- 
+        --- Cadastro de usuários administradores --- 
         1. Adicionar
         2. Pesquisar
         3. Remover
