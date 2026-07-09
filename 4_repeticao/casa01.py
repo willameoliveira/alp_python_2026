@@ -1,4 +1,7 @@
 while True:
+    #comando para limpar a tela do terminal
+    print("\033c", end="")
+
     opcao = int(input("""Calculadora Simples
     1. Soma
     2. Subtração
@@ -11,7 +14,7 @@ while True:
         print("Programa encerrado!")
         break
     elif opcao < 0 or opcao > 4:
-        print("Opção inválida!")
+        input("Opção inválida! ENTER para continuar...")
         continue
 
     num1 = float(input("Digite o primeiro número: "))
@@ -28,3 +31,5 @@ while True:
             print(f"O resultado da divisão é: {num1 / num2}")
         else:
             print("Divisão por zero! Escolha outro número!")
+    
+    input("\nENTER para continuar...")
