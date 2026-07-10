@@ -19,6 +19,7 @@ def tela_menu_texto(usuario_logado):
     print("3 - Remover usuário")
     print("4 - Listar todos os usuários")
     print("5 - Logout")
+    print("6 - Encerrar")
 
     opcao = input("Escolha uma opção: ")
     print()  # linha em branco para organizar a saída

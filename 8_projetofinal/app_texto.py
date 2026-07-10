@@ -23,7 +23,10 @@ from view_texto.pesquisar_view_texto import tela_pesquisar_texto
 from view_texto.remover_view_texto import tela_remover_texto
 from view_texto.listar_view_texto import tela_listar_texto
 
-
+"""
+Função que exibe o cabeçalho do programa.
+Usada a cada vez que chamamos uma tela a partir do menu
+"""
 def exibir_cabecalho():
     print("\033c", end="")  # Limpa a tela do terminal
     print("############################################")
@@ -35,46 +38,55 @@ def main():
     """
     Função principal: controla o fluxo do programa no terminal.
     Usamos um laço de repetição comum (while) para
-    manter o programa rodando até o usuário fazer logout.
+    manter o programa rodando até o usuário escolher 'encerrar' no menu.
     """
 
-    # Variáveis que guardam o estado da sessão do usuário.
+    # Variáveis que guardam a situação do login e o usuário logado.
     autenticado = False
     usuario_logado = ""
     
-    # ------------------------------------------------------
-    # Laço de login: fica pedindo login/senha até acertar
-    # ------------------------------------------------------
-    while not autenticado:
-        exibir_cabecalho()
-        autenticado, usuario_logado = tela_login_texto()
-        input("ENTER para continuar...")
-
-    # ------------------------------------------------------
-    # Laço do menu principal: só sai quando o usuário faz logout
-    # ------------------------------------------------------
     while True:
         exibir_cabecalho()
+
+        if not autenticado:
+            autenticado, usuario_logado = tela_login_texto()
+            input("ENTER para continuar...")
+            """
+            Usando 'continue' para reiniciar o loop a partir desde ponto.
+            Isso impede que o menu apareça caso o login não tenha dado certo.
+            Assim, só sai do login quando o usuário loga corretamente.
+            """
+            continue
+    
         opcao = tela_menu_texto(usuario_logado)
 
         if opcao == "1":
             exibir_cabecalho()
             tela_inserir_texto()
+
         elif opcao == "2":
             exibir_cabecalho()
             tela_pesquisar_texto()
+
         elif opcao == "3":
             exibir_cabecalho()
             tela_remover_texto()
+            
         elif opcao == "4":
             exibir_cabecalho()
             tela_listar_texto()
+
         elif opcao == "5":
             print("Sessão encerrada. Até logo!\n")
-            break  # sai do laço do menu e encerra o programa
+            autenticado = False
+
+        elif opcao == "6":
+            print("Programa fechado. Até logo!\n")
+            break
+
         else:
             print("Opção inválida. Digite um número de 1 a 5.\n")
-        
+
         input("ENTER para continuar...")
 
 
