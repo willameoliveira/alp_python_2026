@@ -45,6 +45,8 @@ def main():
     autenticado = False
     usuario_logado = ""
     
+    #iniciando opcao com zero para depois do login ir para o menu
+    opcao = "0"
     while True:
         exibir_cabecalho()
 
@@ -52,13 +54,14 @@ def main():
             autenticado, usuario_logado = tela_login_texto()
             input("ENTER para continuar...")
             """
-            Usando 'continue' para reiniciar o loop a partir desde ponto.
+            Usando 'continue' para pular para o próximo laço do while.
             Isso impede que o menu apareça caso o login não tenha dado certo.
             Assim, só sai do login quando o usuário loga corretamente.
             """
             continue
-    
-        opcao = tela_menu_texto(usuario_logado)
+        
+        if opcao == "0":
+            opcao = tela_menu_texto(usuario_logado)
 
         if opcao == "1":
             exibir_cabecalho()
@@ -78,7 +81,9 @@ def main():
 
         elif opcao == "5":
             print("Sessão encerrada. Até logo!\n")
+            input("ENTER para continuar...")
             autenticado = False
+            opcao = "0" #faz a tela voltar para o menu no próximo loop
 
         elif opcao == "6":
             print("Programa fechado. Até logo!\n")
@@ -86,8 +91,13 @@ def main():
 
         else:
             print("Opção inválida. Digite um número de 1 a 5.\n")
-
-        input("ENTER para continuar...")
+            opcao = "0" #faz a tela voltar para o menu no próximo loop
+            input("ENTER para continuar...")
+        
+        #Se a opção atual abre outra tela, pergunta se o usuário quer voltar pro menu ou se quer ficar na tela em que está
+        if opcao in ["1", "2", "3", "4"]:
+            opcao = "0" if input("Voltar para menu? (s|n): ").lower() == 's' else opcao
+        
 
 
 # Só executa a função main() quando o arquivo for rodado diretamente

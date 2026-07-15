@@ -21,4 +21,4 @@ def tela_inserir_texto():
 
     sucesso, mensagem = usuario_controller.controlador_inserir_usuario(login, senha)
     print(mensagem)
-    print()
+    print() #Serve para dar um ENTER no terminal. Melhora a visualização

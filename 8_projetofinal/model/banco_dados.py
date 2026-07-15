@@ -3,7 +3,7 @@
 # ============================================================
 # Este arquivo representa o "banco de dados" do nosso sistema.
 #
-# Como as regras do projeto não permitem o uso de banco de dados
+# Como as regras do projeto não exigem o uso de banco de dados
 # real, arquivos, JSON ou CSV, vamos guardar os usuários usando
 # apenas um DICIONÁRIO Python, que fica em memória enquanto o
 # programa está rodando.
