@@ -24,8 +24,7 @@ from view_texto.remover_view_texto import tela_remover_texto
 from view_texto.listar_view_texto import tela_listar_texto
 
 """
-Função que exibe o cabeçalho do programa.
-Usada a cada vez que chamamos uma tela a partir do menu
+Função que imprime o cabeçalho do programa.
 """
 def exibir_cabecalho():
     print("\033c", end="")  # Limpa a tela do terminal
@@ -62,21 +61,19 @@ def main():
         
         if opcao == "0":
             opcao = tela_menu_texto(usuario_logado)
+            #Usando 'continue' para pular para o próximo laço e imprimir o cabeçalho antes de entrar para outra tela
+            continue
 
         if opcao == "1":
-            exibir_cabecalho()
             tela_inserir_texto()
 
         elif opcao == "2":
-            exibir_cabecalho()
             tela_pesquisar_texto()
 
         elif opcao == "3":
-            exibir_cabecalho()
             tela_remover_texto()
             
         elif opcao == "4":
-            exibir_cabecalho()
             tela_listar_texto()
 
         elif opcao == "5":
@@ -92,9 +89,9 @@ def main():
         else:
             print("Opção inválida. Digite um número de 1 a 5.\n")
             opcao = "0" #faz a tela voltar para o menu no próximo loop
-            input("ENTER para continuar...")
+            input("ENTER para voltar...")
         
-        #Se a opção atual abre outra tela, pergunta se o usuário quer voltar pro menu ou se quer ficar na tela em que está
+        #Se a opção selecionada é 1, 2 , 3 ou 4, pergunta se o usuário quer voltar pro menu ou se quer ficar na tela em que está
         if opcao in ["1", "2", "3", "4"]:
             opcao = "0" if input("Voltar para menu? (s|n): ").lower() == 's' else opcao
         
