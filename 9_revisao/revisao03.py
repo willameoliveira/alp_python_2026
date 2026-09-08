@@ -1,6 +1,6 @@
 '''
-Faça um programa que recebe 10 números inteiros e, ao final, imprime
-o resultado da soma de todos eles.
+Faça um programa que recebe 10 números inteiros positivos e, ao final, imprime
+o resultado do somatório deles.
 '''
 soma = 0
 
