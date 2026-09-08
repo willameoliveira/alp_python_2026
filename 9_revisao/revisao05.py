@@ -1,6 +1,6 @@
 '''
 Crie uma função que recebe um número inteiro positivo e retorna o fatorial desse número.
-Considere que o número recebido sempre será um inteiro positivo.
+Considere que o número recebido será sempre maior ou igual a zero.
 OBS: Não utilize a biblioteca math do python
 '''
 def fatorial(n):
