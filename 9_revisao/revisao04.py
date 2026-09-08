@@ -4,7 +4,7 @@ sorteia um dos nomes e o imprime.
 '''
 
 import random  # importando toda a biblioteca random
-#from random import choice  # importando somente a função choice
+#from random import choice  # importando diretamente a função choice
 
 nomes = []
 for i in range(1,11):
