@@ -9,3 +9,16 @@ for i in range(1,11):
     soma += num #  soma = soma + num
 
 print(f"A soma é: {soma}")
+
+
+# solução com while
+
+i = 0
+soma = 0
+
+while i < 10:
+    num = int(input("Número: "))
+    soma += num
+    i += 1
+print(soma)
+ 
