@@ -40,7 +40,7 @@ while jogar == 's':
 
     sorteado = random.randint(1, limite)
     for tentativa in range(1, 4):
-        palpite = int(input(f"Palpite 1 de {tentativa}: "))
+        palpite = int(input(f"Palpite {tentativa} de 3: "))
 
         if palpite == sorteado:
             print("\nParabéns, você acertou!")
