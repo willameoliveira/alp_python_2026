@@ -8,12 +8,12 @@ while True:
     print("#########################################\n")
 
     if not logado:
-        print("===LOGIN===""")
-        login = (input("Digite seu login: "))
-        senha = (input("Digite sua senha: "))
+        print("===LOGIN===")
+        login = input("Digite seu login: ")
+        senha = input("Digite sua senha: ")
 
         if login =="admin" and senha =="123":
-            print(f"Login realizado com sucesso! Bem-vindo, {login}!.\n")
+            print(f"Login realizado com sucesso! Bem-vindo, {login}!\n")
             input("ENTER para continuar...")
             logado = True
             usuario_logado = login 
@@ -21,7 +21,7 @@ while True:
             input("\nLogin ou senha incorretos! ENTER para tentar novamente.")
 
     else:
-        print("===MENU PRINCIPAL===""")
+        print("===MENU PRINCIPAL===")
         print(f"Usuário logado: {usuario_logado}")
         print("1 - Inserir usuário")
         print("2 - Pesquisar usuário")
@@ -35,6 +35,7 @@ while True:
         if opcao == "5":
             print("Fazendo logout...")
             input("ENTER para voltar para o login.")
+            usuario_logado = ""
             logado = False
             
         elif opcao == "6":
